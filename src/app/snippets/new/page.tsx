@@ -1,6 +1,7 @@
 import { db } from '@/db';
 import { redirect } from 'next/navigation';
 
+//  create new etry in the data base
 //   change data by using server action
 export default function SnippetCreatePage() {
     async function createSnippet(formData: FormData) {
@@ -17,7 +18,7 @@ export default function SnippetCreatePage() {
             },
         });
         console.log(snippet);
-        //  redirect user to the route route
+        //  redirect user to the root route
         redirect('/');
     }
     return (
