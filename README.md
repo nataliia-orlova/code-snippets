@@ -20,12 +20,28 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Features
+
+-   Fetching data right inside the server component and send data as props to use in client component
+-   Use Monaco Editor for code editor
+-   Use Prisma for db inside the project
+-   Using dynamic paths []
+-   Using server actions for changing data
+-   Use loading, not found, layout pages
+-   Separate file with server aactions
+
+## Notes
+
+-   server actions can not be defined in client components: 1. can be defined in server component and passed as props to client component OR 2. you can create a separate file in the project with server actions that can be exported/imported and used where needed
+-   server components can not pass event handlers to client components
+-   hooks and event handlers can not be used in server components
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+-   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
