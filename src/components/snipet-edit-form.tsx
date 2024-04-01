@@ -14,6 +14,9 @@ export default function SnippetEditForm({ snippet }: SnippetEditFormProps) {
     const handleEditorChange = (value: string = '') => {
         setCode(value);
     };
+    //  calling bind to have a preloaded version of server action
+    // 1 - always null, 2 - first arg of the server action, 3 - second arg of the server action
+    const editSnippetAction = actions.editSnippet.bind(null, snippet.id, code);
 
     return (
         <div>
@@ -25,6 +28,11 @@ export default function SnippetEditForm({ snippet }: SnippetEditFormProps) {
                 options={{ minimap: { enabled: false } }}
                 onChange={handleEditorChange}
             />
+            <form action={editSnippetAction}>
+                <button type='submit' className='p-2 border rounded'>
+                    Save
+                </button>
+            </form>
         </div>
     );
 }
